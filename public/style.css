@@ -16,6 +16,10 @@ body {
 	padding: 15px;
 }
 
+.jumbotron{
+    width: 100%;
+}
+
 .form-signin .form-floating:focus-within {
 	z-index: 2;
 }
