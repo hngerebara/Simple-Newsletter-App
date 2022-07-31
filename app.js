@@ -2,12 +2,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const https = require('https');
 
+const secrets = require('./secrets.json')
+
 const app = express();
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-const url = 'https://us10.api.mailchimp.com/3.0/lists/808a684f7a';
+const url = secrets.URL;
 
 app.get('/', (req, res) => {
 	res.sendFile(__dirname + '/index.html');
@@ -35,7 +37,7 @@ app.post('/', (req, res) => {
 
 	const options = {
 		method: 'POST',
-		auth: 'hopeaz1:311596de746f1ca02f5a12bfb7bf37b-us10',
+		auth: `hopeaz1:${secrets.API_KEY}`,
 	};
 
 	const request = https.request(url, options, (response) => {
