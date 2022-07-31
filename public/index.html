@@ -15,19 +15,19 @@
 <body class="text-center">
 
     <main class="form-signin w-100 m-auto">
-        <form>
+        <form method="post" action="/">
             <img class="mb-4" src="coagit_logo.jpg" alt="" width="200" height="70">
             <h1 class="h3 mb-3 fw-normal">Newsletter Signup</h1>
             <div class="form-floating">
-                <input type="text" class="form-control" id="fname" placeholder="First Name">
+                <input type="text" class="form-control" name="fname" placeholder="First Name">
                 <label for="fname">First Name</label>
             </div>
             <div class="form-floating">
-                <input type="text" class="form-control" id="lname" placeholder="Last Name">
+                <input type="text" class="form-control" name="lname" placeholder="Last Name">
                 <label for="lname">Last Name</label>
             </div>
             <div class="form-floating">
-                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                <input type="email" class="form-control" name="email" placeholder="name@example.com">
                 <label for="email">Email</label>
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
